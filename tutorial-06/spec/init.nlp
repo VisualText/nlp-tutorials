@@ -1,0 +1,21 @@
+###############################################
+# FILE: init
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2022-8-29 11:35:22
+# MODIFIED:
+###############################################
+
+@CODE
+
+G("max header") = 0;
+
+G("resume") = findconcept(findroot(),"resume");
+if (!G("resume")) G("resume") = makeconcept(findroot(),"resume");
+rmchildren(G("resume"));
+
+G("company") = findconcept(G("resume"),"company");
+if (!G("company")) G("company") = makeconcept(G("resume"),"company");
+rmchildren(G("company"));
+
+@@CODE

@@ -1,0 +1,20 @@
+###############################################
+# FILE: removeLines
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2022-8-29 14:51:22
+# MODIFIED:
+###############################################
+
+@NODES _ROOT
+
+@PRE
+<1,1> var("header");
+
+@POST
+splice(1,1);
+
+@RULES
+_xNIL <-
+	_LINE	### (1)
+	@@
