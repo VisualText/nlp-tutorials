@@ -1,0 +1,26 @@
+###############################################
+# FILE: header
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2022-8-29 11:30:3
+# MODIFIED:
+###############################################
+
+@NODES _LINE
+
+@POST
+L("header") = N("$text",2);
+S("header") = L("header");
+X("header") = 1;
+S("count") = strlength(N("$text",1));
+if (S("count") > G("max header")) {
+	G("max header") = S("count");
+}
+"header.txt" << L("header") << " " << str(S("count")) << "\n";
+single();
+
+@RULES
+_header <-
+	_xWILD [min=1 match=(\#)]	### (1)
+	_xWILD [plus fail=(_xEND)]	### (2)
+	@@

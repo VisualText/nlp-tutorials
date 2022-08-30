@@ -1,0 +1,13 @@
+###############################################
+# FILE: output
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2022-8-29 16:30:25
+# MODIFIED:
+###############################################
+
+@CODE
+
+DisplayKB(G("resumes"),1);
+
+@@CODE
