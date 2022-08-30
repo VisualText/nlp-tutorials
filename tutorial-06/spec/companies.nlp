@@ -1,0 +1,18 @@
+###############################################
+# FILE: comapnies
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2022-8-29 17:6:17
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _headerZone _Experience 
+
+@POST
+X("companies",3)++;
+makeconcept(G("company"),N("header"));
+
+@RULES
+_xNIL <-
+	_headerZone	### (1)
+	@@

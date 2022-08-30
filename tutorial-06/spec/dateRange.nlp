@@ -1,0 +1,16 @@
+###############################################
+# FILE: dateRange
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2022-8-30 17:47:34
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _headerZone _Experience _headerZone _LINE
+				
+@RULES
+_dateRange <-
+	_xNUM							### (1)
+	to								### (2)
+	_xWILD [match=(_xNUM present)]	### (3)
+	@@

@@ -1,0 +1,30 @@
+###############################################
+# FILE: labelZones
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2022-8-29 16:56:39
+# MODIFIED:
+###############################################
+
+@PATH _ROOT _headerZone
+
+@POST
+if (N("header")) {
+	L("node name") = "_" + N("header");
+	pnrename(N(1),L("node name"));
+}
+
+@RULES
+_xNIL <- 
+	_headerZone	### (1)
+	@@
+
+@POST
+if (N("header")) {
+	pnrename(N(1),"_Person");
+}
+
+@RULES
+_xNIL <- 
+	_header	### (1)
+	@@
