@@ -1,0 +1,14 @@
+###############################################
+# FILE: points
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2022-8-30 16:47:56
+# MODIFIED:
+###############################################
+
+@NODES _ROOT
+
+@RULES
+_no <- no \. @@
+_inc <- inc \. @@
+_num <- _xNUM \. _xNUM @@
