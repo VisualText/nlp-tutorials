@@ -1,0 +1,21 @@
+###############################################
+# FILE: output
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2022-8-30 15:10:32
+# MODIFIED:
+###############################################
+
+@CODE
+
+"output.txt" << "$text: " << pnvar(pnroot(),"$text") << "\n";
+"output.txt" << "$treetext: " << pnvar(pnroot(),"$treetext") << "\n";
+"output.txt" << "\n";
+"output.txt" << "$apppath: " << G("$apppath") << "\n";
+"output.txt" << "$input: " << G("$input") << "\n";
+"output.txt" << "$inputpath: " << G("$inputpath") << "\n";
+"output.txt" << "$inputname: " << G("$inputname") << "\n";
+"output.txt" << "$inputhead: " << G("$inputhead") << "\n";
+"output.txt" << "$inputtail: " << G("$inputtail") << "\n";
+
+@@CODE

@@ -1,0 +1,21 @@
+###############################################
+# FILE: tags
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2022-8-30 15:8:28
+# MODIFIED:
+###############################################
+
+@NODES _ROOT
+
+@POST
+S("tag") = N("$text",3);
+single();
+
+@RULES
+_tag <-
+	\<				### (1)
+	\/ [optional]	### (2)
+	_xALPHA			### (3)
+	\>				### (4)
+	@@
