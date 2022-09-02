@@ -1,0 +1,17 @@
+###############################################
+# FILE: kbInit
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2022-8-31 13:40:49
+# MODIFIED:
+###############################################
+
+@CODE
+
+G("person") = findconcept(findroot(),"person");
+if (!G("person")) G("person") = makeconcept(findroot(),"person");
+
+G("sentences") = findconcept(findroot(),"sentences");
+if (!G("sentences")) G("sentences") = makeconcept(findroot(),"sentences");
+
+@@CODE

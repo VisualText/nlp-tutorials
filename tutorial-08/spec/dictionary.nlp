@@ -1,0 +1,37 @@
+###############################################
+# FILE: dictionary
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2022-8-31 17:6:4
+# MODIFIED:
+###############################################
+
+@NODES _LINE
+
+@POST
+S("gender") = "male";
+S("con") = AddPerson(X("con"),"Fred","male","noun");
+single();
+@RULES
+_name <- Fred @@
+
+@POST
+S("gender") = "female";
+S("con") = AddPerson(X("con"),"Sally","female","noun");
+single();
+@RULES
+_name <- Sally @@
+
+@POST
+S("gender") = "male";
+S("con") = AddPerson(X("con"),"he","male","pro");
+single();
+@RULES
+_pro <- he @@
+
+@POST
+S("gender") = "female";
+S("con") = AddPerson(X("con"),"she","female","pro");
+single();
+@RULES
+_pro <- she @@

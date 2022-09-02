@@ -1,0 +1,17 @@
+###############################################
+# FILE: codeRegion
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2022-8-31 7:34:11
+# MODIFIED:
+###############################################
+
+@CODE
+
+G("some global variable") = 1;
+
+SomeFunction("moose","running");
+
+"code.txt" << "Hello from the code region!";
+
+@@CODE

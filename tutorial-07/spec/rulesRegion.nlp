@@ -1,0 +1,14 @@
+###############################################
+# FILE: rulesRegion
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2022-8-31 7:41:34
+# MODIFIED:
+###############################################
+
+@NODES _ROOT
+
+@RULES
+_interjection <-
+	hello	### (1)
+	@@

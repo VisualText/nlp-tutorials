@@ -1,0 +1,5 @@
+Fred is a rocket scientist.
+Sally is a lawyer.
+She is married to Fred.
+He is 55 years old.
+She is 57 years old.

@@ -1,0 +1,13 @@
+###############################################
+# FILE: kbDisplay01
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2022-9-1 13:24:49
+# MODIFIED:
+###############################################
+
+@CODE
+
+DispKB();
+
+@@CODE
