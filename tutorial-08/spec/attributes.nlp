@@ -1,0 +1,43 @@
+###############################################
+# FILE: attributes
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2022-8-31 17:23:47
+# MODIFIED:
+###############################################
+
+@NODES _LINE
+
+@POST
+S("is") = N("$text",3);
+single();
+
+@RULES
+_attr <-
+	is							### (1)
+	a							### (2)
+	_xWILD [fail=(\. _xEND)]	### (3)
+	@@
+
+@POST
+S("age") = N("$text",2);
+single();
+				
+@RULES
+_attr <-
+	is		### (1)
+	_xNUM	### (2)
+	years	### (3)
+	old		### (4)
+	@@
+
+@POST
+S("relationship") = "married";
+single();
+
+@RULES
+_married <-
+	is		### (1)
+	married	### (2)
+	to		### (3)
+	@@

@@ -1,0 +1,5 @@
+tokenize	nil	# Gen:   Convert input to token list
+nlp	readme	# comment
+nlp	codeRegion	# comment
+nlp	declRegion	# comment
+nlp	rulesRegion	# comment

@@ -1,0 +1,78 @@
+###############################################
+# FILE: funcs
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2022-8-31 17:13:10
+# MODIFIED:
+###############################################
+
+@DECL
+
+DispKB() {
+	DisplayKB(G("person"),1);
+	DisplayKB(G("sentences"),1);
+}
+
+AddPerson(L("sent con"),L("name"),L("gender"),L("pos")) {
+	L("sent") =  makeconcept(L("sent con"),L("name"));
+	addstrval(L("sent"),"pos",L("pos"));
+	addstrval(L("sent"),"gender",L("gender"));
+	if (L("pos") == "noun") {
+		L("person") = AddUniqueCon(G("person"),L("name"));
+		addconval(L("sent"),"person",L("person"));
+		AddUniqueStr(L("person"),"gender",L("gender"));
+	}
+	return L("sent");
+}
+
+ResolvePronoun(L("sent con"),L("pro con")) {
+	if (L("pro con")) {
+		"anaphora.txt" << conceptpath(L("sent con")) << "\n";
+
+		L("sent") = prev(L("sent con"));
+		L("pro gender") = strval(L("pro con"),"gender");
+
+		while (L("sent")) {
+			if (down(L("sent"))) {
+				"anaphora.txt" << conceptpath(L("sent")) << "\n";
+				L("child") = down(L("sent"));
+				while (L("child")) {
+					if (strval(L("child"),"pos") == "noun" &&
+						strval(L("child"),"gender") == L("pro gender")) {
+
+						addconval(L("pro con"),"person",L("child"));
+						"anaphora.txt" << conceptname(L("pro con")) << " == " << conceptname(L("child")) << "\n";
+						return 1;
+					}
+					L("child") = next(L("child"));
+				}
+			}
+			L("sent") = prev(L("sent"));
+		}		
+	}
+	return 0;
+}
+
+LookupPerson(L("con")) {
+	if (L("con")) {
+		if (strval(L("con"),"pos") == "pro") {
+			L("con") = conval(L("con"),"person");
+		}
+	}
+	return conval(L("con"),"person");
+}
+
+AddRelationship(L("con 1"),L("con 2"),L("type")) {
+	L("person 1") = LookupPerson(L("con 1"));
+	L("person 2") = LookupPerson(L("con 2"));
+	addconval(L("person 1"),"spouse",L("person 2"));
+	addconval(L("person 2"),"spouse",L("person 1"));
+}
+
+AddAttribute(L("person con"),L("attr node")) {
+	L("person") = LookupPerson(L("person con"));
+	AddUniqueStr(L("person"),"age",pnvar(L("attr node"),"age"));
+	AddUniqueStr(L("person"),"is",pnvar(L("attr node"),"is"));
+}
+
+@@DECL

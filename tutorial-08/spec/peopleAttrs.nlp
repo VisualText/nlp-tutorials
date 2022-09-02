@@ -1,0 +1,28 @@
+###############################################
+# FILE: peopleAttrs
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2022-9-1 14:25:20
+# MODIFIED:
+###############################################
+
+@NODES _LINE
+
+@POST
+AddRelationship(N("con",1),N("con",3),"married");
+
+@RULES
+_xNIL <-
+	_xWILD [one match=(_pro _name)]	### (1)
+	_married						### (2)
+	_name							### (3)
+	@@
+
+@POST
+AddAttribute(N("con",1),N(2));
+
+@RULES
+_xNIL <-
+	_xWILD [one match=(_pro _name)]	### (1)
+	_attr							### (2)
+	@@

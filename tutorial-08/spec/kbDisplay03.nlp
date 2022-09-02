@@ -1,0 +1,13 @@
+###############################################
+# FILE: output
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2022-8-31 17:16:58
+# MODIFIED:
+###############################################
+
+@CODE
+
+DispKB();
+
+@@CODE

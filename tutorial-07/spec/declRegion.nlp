@@ -1,0 +1,18 @@
+###############################################
+# FILE: declRegion
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2022-8-31 7:36:10
+# MODIFIED:
+###############################################
+
+@DECL
+
+SomeFunction(L("attr"), L("value")) {
+	if (!L("attr") || !L("value"))
+		return 0;
+	"output.txt" << L("attr") << " is " << L("value") << "\n";
+	return 1;
+}
+
+@@DECL
