@@ -1,0 +1,17 @@
+###############################################
+# FILE: removeTags
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2022-8-30 15:10:9
+# MODIFIED:
+###############################################
+
+@NODES _ROOT
+
+@POST
+excise(1,1);
+
+@RULES
+_xNIL <-
+	_tag	### (1)
+	@@

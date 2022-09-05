@@ -1,0 +1,19 @@
+###############################################
+# FILE: suggestModifiers
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2022-9-5 8:18:10
+# MODIFIED:
+###############################################
+
+@NODES _ROOT
+
+# ONLINE HELP:
+# http://visualtext.org/help/NLP_PP_Stuff/Phrase_element_modifiers.htm
+
+@RULES
+_np <-
+	_det			### (1)
+	_adj [optional]	### (2)
+	_noun [trig]	### (3)
+	@@

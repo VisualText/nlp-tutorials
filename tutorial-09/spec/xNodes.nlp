@@ -1,0 +1,25 @@
+###############################################
+# FILE: matching
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2022-9-3 5:48:21
+# MODIFIED:
+###############################################
+
+@NODES _ROOT
+
+# LINK TO SPECIAL RULE ELEMENTS:
+# http://visualtext.org/help/NLP_PP_Stuff/Special_rule_elements.htm
+
+@RULES
+_xNIL <-
+	_xSTART		### (1)  <==== REQUIRES THE NEXT NODE TO BE THE FIRST
+	_xALPHA		### (2)
+	_xNUM		### (3)
+	_xWILD		### (3)
+	_xWHITE		### (4)
+	_xCAP		### (5)
+	_xCAPLET	### (6)
+	_xLET		### (7)
+	_xEND		### (8)  <==== REQUIRES THE PREVIOUS NODE TO BE THE LAST
+	@@
