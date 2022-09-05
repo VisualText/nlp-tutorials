@@ -1,0 +1,15 @@
+###############################################
+# FILE: init
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2022-9-5 9:37:30
+# MODIFIED:
+###############################################
+
+@NODES _ROOT
+
+@CODE
+
+G("people") = 0;
+
+@@CODE

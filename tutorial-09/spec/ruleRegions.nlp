@@ -1,0 +1,25 @@
+###############################################
+# FILE: ruleRegions
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2022-9-5 8:12:43
+# MODIFIED:
+###############################################
+
+@NODES _ROOT
+
+@CHECK
+if (N("pattern",1) != "n")
+	fail();
+
+@PRE
+<1,1> var("header");
+
+@POST
+S("text") = N("$text",1);
+single();
+
+@RULES
+_header <-
+	_LINE	### (1)
+	@@

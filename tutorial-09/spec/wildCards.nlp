@@ -1,0 +1,32 @@
+###############################################
+# FILE: wilds
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2022-9-5 8:37:38
+# MODIFIED:
+###############################################
+
+@NODES _ROOT
+
+@RULES
+_header <-
+	_xWILD [plus match=(\# \-)]	### (1)
+	_xALPHA						### (2)
+	@@
+
+@RULES
+_np <-
+	_det								### (1)
+	_xWILD [match=(_adj)]				### (2)
+	_xWILD [trig plus match=(_noun)]	### (3)
+	@@
+
+@POST
+singler(2,2);
+
+@RULES
+_endSent <-
+	_xWILD [s one match=(_xALPHA _xNUM)]					### (1)
+	_xWILD [one trig match=(\. \? \!)]						### (2)
+	_xWILD [s one match=(_xWHITE _xALPHA _xNUM _xEND _xCTRL)]	### (3)
+    @@

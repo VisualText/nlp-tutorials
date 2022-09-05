@@ -1,0 +1,24 @@
+###############################################
+# FILE: preRegion
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2022-9-3 5:48:41
+# MODIFIED:
+###############################################
+
+@NODES _ROOT
+
+# LINK TO PRE ACTIONS:
+# https://visualtext.org/help/NLP_PP_Stuff/AT-PRE_Actions.htm
+
+@PRE
+<4,4> length(4);
+<4,4> numrange(1700,2100);
+
+@RULES
+_date <-
+	_month		### (1)
+	_xNUM		### (2)
+	\, [opt]	### (3)
+	_xNUM		### (4)
+	@@

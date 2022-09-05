@@ -1,0 +1,21 @@
+###############################################
+# FILE: dictionary
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2022-9-3 5:46:59
+# MODIFIED:
+###############################################
+
+@NODES _ROOT
+
+@RULES
+_state <- California @@
+_prep <- _xWILD [one matches=(as at in of with into)] @@
+_det <- _xWILD [one matches=(a an the this that)] @@
+_adj <- _xWILD [one matches=(blue red green happy funny)] @@
+_noun <- _xWILD [one matches=(moose frog lizard)] @@
+_month <- _xWILD [one matches=(january february march)] @@
+
+@POST S("num") = 3; single(); @RULES _num <- three @@
+@POST S("gender") = "female"; single(); @RULES _pro <- she @@
+@POST S("compare") = ">"; single(); @RULES _compare <- greater than @@

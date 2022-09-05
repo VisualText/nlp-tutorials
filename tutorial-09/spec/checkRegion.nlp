@@ -1,0 +1,30 @@
+###############################################
+# FILE: checkRegion
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2022-9-3 5:49:7
+# MODIFIED:
+###############################################
+
+@NODES _ROOT
+
+@CHECK
+if (G("people"))
+	succeed();
+fail();
+
+@RULES
+_person <-
+	fred	### (1)
+	@@
+
+@CHECK
+if (G("people"))
+	fail();
+succeed();
+
+@RULES
+_animal <-
+	horse	### (1)
+	@@
+
