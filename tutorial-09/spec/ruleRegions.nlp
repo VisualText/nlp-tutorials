@@ -8,9 +8,9 @@
 
 @NODES _ROOT
 
-@CHECK
-if (N("pattern",1) != "n")
-	fail();
+#@CHECK
+#if (N("pattern",1) != "n")
+#	fail();
 
 @PRE
 <1,1> var("header");
