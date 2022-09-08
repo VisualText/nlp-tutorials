@@ -8,6 +8,8 @@
 
 @CODE
 
+# LINK TO ALL THE SPECIAL VARIABLES: http://visualtext.org/help/NLP_PP_Stuff/Special_Variables.htm
+
 "output.txt" << "$text: " << pnvar(pnroot(),"$text") << "\n";
 "output.txt" << "$treetext: " << pnvar(pnroot(),"$treetext") << "\n";
 "output.txt" << "\n";

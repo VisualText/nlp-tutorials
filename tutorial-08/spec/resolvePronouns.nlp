@@ -10,7 +10,6 @@
 
 @POST
 ResolvePronoun(X("con"),N("con"));
-L("stub") = 1;
 
 @RULES
 _xNIL <-

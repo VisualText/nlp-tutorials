@@ -1,7 +1,0 @@
-Sequence file is:
-tokenize
-NOHASH rule: _xNIL [] [] <- _xWHITE [1,1 singlet] [] @@
-NOHASH rule: _xNIL [] [] <- _xSTART [1,1] [] _xALPHA [1,1] [] _xNUM [1,1] [] _xWILD [0,0] [] _xWHITE [1,1] [] _xCAP [1,1] [] _xCAPLET [1,1] [] _xLET [1,1] [] _xEND [1,1] [] @@
-
-Passes: (tok,nil) (nlp,init) (nlp,RemoveWhiteSpace) (nlp,ruleRegions) (nlp,dictionary) (nlp,xNodes) (nlp,suggestedModifiers) (nlp,phraseModifiers) (nlp,wildCards) (nlp,postRegion) (nlp,preRegion) (nlp,checkRegion) 
-
