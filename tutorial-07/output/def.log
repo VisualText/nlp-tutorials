@@ -1,5 +1,0 @@
-Sequence file is:
-tokenize
-
-Passes: (tok,nil) (nlp,readme) (nlp,codeRegion) (nlp,declRegion) (nlp,rulesRegion) 
-

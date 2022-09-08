@@ -1,11 +1,0 @@
-Sequence file is:
-tokenize
-NOHASH rule: _LINE [] [] <- _xWILD [0,0 fails=( 
-)] [] _xWILD [1,1 matches=(
- _xEND)] [] @@
-NOHASH rule: _xNIL [] [] <- _xWHITE [1,1 singlet] [] @@
-NOHASH rule: _xNIL [] [] <- _xWILD [0,0 matches=(_LINE _headerZone)] [] _xEND [1,1] [] @@
-NOHASH rule: _dateRange [] [] <- _xNUM [1,1] [] to [1,1] [] _xWILD [0,0 matches=(_xNUM present)] [] @@
-
-Passes: (tok,nil) (nlp,init) (nlp,KBFuncs) (nlp,Lines) (nlp,RemoveWhiteSpace) (nlp,RemoveBlankLines) (nlp,header) (nlp,removeLines) (rec,nestHeaders) (nlp,labelZones) (nlp,companies) (nlp,dateRange) (nlp,output) 
-

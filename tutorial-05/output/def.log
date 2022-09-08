@@ -1,11 +1,0 @@
-Sequence file is:
-tokenize
-NOHASH rule: _num [] [] <- _xNUM [1,1] [] . [1,1] [] _xNUM [1,1] [] @@
-NOHASH rule: _LINE [] [] <- _xWILD [0,0 fails=( 
-)] [] _xWILD [1,1 matches=(
- _xEND)] [] @@
-NOHASH rule: _xNIL [] [] <- _xWHITE [1,1 singlet] [] @@
-NOHASH rule: _sentence [] [] <- _xWILD [0,0 fails=(_endSent _BLANKLINE)] [] _xWILD [1,1 matches=(_endSent _BLANKLINE)] [] @@
-
-Passes: (tok,nil) (nlp,points) (nlp,Lines) (nlp,paragraph) (nlp,RemoveBlankLines) (nlp,spliceLines) (nlp,RemoveWhiteSpace) (nlp,sentenceEnders) (nlp,sentences) 
-

@@ -1,4 +1,4 @@
 tokenize	nil	# Gen:   Convert input to token list
 nlp	tags	# comment
-nlp	remoteTags	# comment
+nlp	removeTags	# comment
 nlp	output	# comment

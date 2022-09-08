@@ -1,5 +1,0 @@
-Sequence file is:
-tokenize
-
-Passes: (tok,nil) (nlp,tags) (nlp,remoteTags) (nlp,output) 
-
