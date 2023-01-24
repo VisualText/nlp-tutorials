@@ -1,0 +1,39 @@
+###############################################
+# FILE: final
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2023-1-23 12:17:34
+# MODIFIED:
+###############################################
+
+@CODE
+
+if (G("$islastfile") || !G("$isdirrun")) {
+
+    # Loop through states KB and make states dict file
+    L("state") = down(G("states"));
+    while (L("state")) {
+        G("dict") << conceptname(L("state")) << " s=state";
+        L("attr") = down(L("state"));
+        while (L("attr")) {
+            L("name") = conceptname(L("attr"));
+            if (L("name") == "abbrev") {
+                G("dict") << " abbrev=" << QuoteIfNeeded(strval(L("attr"),"letters"));
+            }
+            L("attr") = next(L("attr"));
+        }
+        L("state") = next(L("state"));
+        G("dict") << "\n";
+    }
+
+    SaveKB(G("kbb"),G("states"),2);
+}
+
+closefile(G("dict"));
+closefile(G("kbb"));
+closefile(G("abbrev"));
+closefile(G("cities"));
+
+closefile(G("debug"));
+
+@@CODE

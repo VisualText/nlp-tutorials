@@ -1,0 +1,10 @@
+{
+    "visualText": [
+        {
+            "name": "Analyzer",
+            "type": "state",
+            "currentTextFile": "c:\\git\\nlp-tutorials\\tutorial-13\\tutorial-13-a\\input\\urls.txt",
+            "currentPassFile": "c:\\git\\nlp-tutorials\\tutorial-13\\tutorial-13-a\\spec\\hrefs.nlp"
+        }
+    ]
+}

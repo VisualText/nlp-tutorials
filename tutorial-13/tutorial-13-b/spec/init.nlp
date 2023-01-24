@@ -1,0 +1,36 @@
+###############################################
+# FILE: init
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2023-1-23 12:10:16
+# MODIFIED:
+###############################################
+
+@CODE
+
+G("dictfile") = G("$kbpath") + "states.dict";
+G("abbrevdict") = G("$kbpath") + "abbrev.dict";
+G("kbbfile") = G("$kbpath") + "states.kbb";
+G("citiesdict") = G("$kbpath") + "cities.dict";
+
+G("debugfile") = G("$kbpath") + "debug.txt";
+G("debug") = openfile(G("debugfile"),"app");
+
+G("state name") = strsubst(G("$inputhead"),"-"," ");
+G("states") = getconcept(findroot(),"states");
+
+if (G("$isfirstfile") || !G("$isdirrun")) {
+    rmchildren(G("states"));
+    L("type") = "w";
+} else {
+    L("type") = "app";
+}
+
+G("state") = getconcept(G("states"),G("state name"));
+
+G("dict") = openfile(G("dictfile"),L("type"));
+G("kbb") = openfile(G("kbbfile"),L("type"));
+G("abbrev") = openfile(G("abbrevdict"),L("type"));
+G("cities") = openfile(G("citiesdict"),L("type"));
+
+@@CODE

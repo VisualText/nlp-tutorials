@@ -1,0 +1,16 @@
+###############################################
+# FILE: tagPhrases
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2023-1-23 11:5:30
+# MODIFIED:
+###############################################
+
+@NODES _ROOT
+
+@RULES
+_td <-
+	_tdOpen	### (1)
+	_xWILD [fail=(_tdClose _tdOpen)]
+	_tdClose
+	@@

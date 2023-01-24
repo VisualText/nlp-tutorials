@@ -1,0 +1,17 @@
+###############################################
+# FILE: tagText
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2023-1-23 11:37:11
+# MODIFIED:
+###############################################
+
+@NODES _ROOT
+
+@POST
+N("text") = N("$treetext");
+
+@RULES
+_xNIL <-
+	_td	### (1)
+	@@

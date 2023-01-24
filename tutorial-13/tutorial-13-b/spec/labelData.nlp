@@ -1,0 +1,16 @@
+###############################################
+# FILE: labelData
+# SUBJ: comment@POST S(
+# AUTH: David de Hilster
+# CREATED: 2023-1-23 11:50:56
+# MODIFIED:
+###############################################
+
+@NODES _td
+
+@POST L("node") = pnnext(pnup(N(1)));pnrename(L("node"),"_abbrev");@RULES _info <- state abbreviation @@
+@POST L("node") = pnnext(pnup(N(1)));pnrename(L("node"),"_capital");@RULES _xNIL <- state capital @@
+@POST L("node") = pnnext(pnup(N(1)));pnrename(L("node"),"_numCounties");@RULES _xNIL <- number of counties @@
+@POST L("node") = pnnext(pnup(N(1)));pnrename(L("node"),"_timeZone");@RULES _xNIL <- time zone @@
+@POST L("node") = pnnext(pnup(N(1)));pnrename(L("node"),"_areaCodes");@RULES _xNIL <- area codes @@
+@POST L("node") = pnnext(pnup(N(1)));pnrename(L("node"),"_cities");@RULES _xNIL <- top _xNUM @@

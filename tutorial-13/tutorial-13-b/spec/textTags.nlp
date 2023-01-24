@@ -1,0 +1,16 @@
+###############################################
+# FILE: textTags
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2023-1-23 11:31:13
+# MODIFIED:
+###############################################
+
+@NODES _td
+
+@RULES
+_tag <-
+	\<					### (1)
+	_xWILD [fail=(\>)]	### (2)
+	\>
+	@@
