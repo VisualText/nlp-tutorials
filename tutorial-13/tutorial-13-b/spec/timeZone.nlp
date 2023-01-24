@@ -1,0 +1,18 @@
+###############################################
+# FILE: parseInfo
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2023-1-23 14:37:12
+# MODIFIED:
+###############################################
+
+@NODES _timeZone
+
+@POST
+L("timezone") = getconcept(G("state"),"timezone");
+makeconcept(L("timezone"),N("$text"));
+
+@RULES
+_xNIL <-
+	_xWILD [plus fail=(\,)]	### (1)
+	@@

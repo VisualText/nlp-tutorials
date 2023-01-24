@@ -1,0 +1,25 @@
+###############################################
+# FILE: parseInfo
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2023-1-23 14:37:12
+# MODIFIED:
+###############################################
+
+@NODES _cities
+
+@POST
+	L("cities") = getconcept(G("state"),"cities");
+	L("city") = makeconcept(L("cities"),N("$text",1));
+	L("num") = strsubst(N("$text",3),",",0);
+	addnumval(L("city"),"population",num(L("num")));
+	G("cities") << strtolower(N("$text",1)) << " s=city state=" << QuoteIfNeeded(conceptname(G("state"))) << "\n";
+	single();
+
+@RULES
+_city <-
+	_xWILD [plus match=(_xALPHA)]	### (1)
+	\(								### (2)
+	_xWILD [plus fail=(\))]			### (3)
+	\)								### (4)
+	@@

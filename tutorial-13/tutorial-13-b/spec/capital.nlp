@@ -1,0 +1,19 @@
+###############################################
+# FILE: parseInfo
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2023-1-23 14:37:12
+# MODIFIED:
+###############################################
+
+@NODES _ROOT
+
+@POST
+	L("capital") = getconcept(G("state"),"capital");
+	addstrval(L("capital"),"city",N("text",1));
+	single();
+
+@RULES
+_xNIL <-
+	_capital
+	@@

@@ -1,0 +1,19 @@
+###############################################
+# FILE: parseInfo
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2023-1-23 14:37:12
+# MODIFIED:
+###############################################
+
+@NODES _ROOT
+
+@POST
+L("abbrev") = getconcept(G("state"),"abbrev");
+addstrval(L("abbrev"),"letters",N("text"));
+G("abbrev") << strtolower(N("text")) << " s=state abbrev=1 state=" << QuoteIfNeeded(G("state name")) << "\n";
+
+@RULES
+_xNIL <-
+	_abbrev	### (1)
+	@@

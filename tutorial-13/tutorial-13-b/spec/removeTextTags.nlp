@@ -1,0 +1,17 @@
+###############################################
+# FILE: removeTextTags
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2023-1-23 11:34:50
+# MODIFIED:
+###############################################
+
+@NODES _td
+
+@POST
+excise(1,1);
+
+@RULES
+_xNIL <-
+	_xWILD [one match=(_tag _tdOpen _tdClose)]	### (1)
+	@@

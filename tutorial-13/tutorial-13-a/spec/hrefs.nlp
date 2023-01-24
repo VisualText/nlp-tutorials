@@ -1,0 +1,21 @@
+###############################################
+# FILE: hrefs
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2023-1-23 10:1:57
+# MODIFIED:
+###############################################
+
+@NODES _LINE
+
+@POST
+	"urls.txt" << "https://state.1keydata.com/" << N("$text",4) << "\n";
+	single();
+@RULES
+_xNIL <-
+	href				### (1)
+	\=					### (2)
+	\"					### (3)
+	_xWILD [fail=(\")]	### (4)
+	\"					### (5)
+	@@

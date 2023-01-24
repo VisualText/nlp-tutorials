@@ -1,0 +1,14 @@
+###############################################
+# FILE: theRest
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2023-1-23 11:46:16
+# MODIFIED:
+###############################################
+
+@NODES _ROOT
+
+@RULES
+_rest <-
+	_xWILD [fail=(_td)]
+	@@
