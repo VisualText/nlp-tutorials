@@ -5,12 +5,11 @@ from urllib.error import URLError, HTTPError
 from bs4 import BeautifulSoup
 from pathlib import Path
 import re
+import certifi
 
 wordsfile = os.path.join(os.path.dirname(__file__), "urls.txt")
 file1 = codecs.open(wordsfile, "r", "utf-8")
 lines = file1.readlines()
-
-urlbase = "https://state.1keydata.com/"
   
 count = 0
 for url in lines:
@@ -31,7 +30,7 @@ for url in lines:
     found = False
 
     try:
-        page = urllib.request.urlopen(url)
+        page = urllib.request.urlopen(url, cafile=certifi.where())
     except HTTPError as e:
         print(' Error code: ', e.code)
         file1 = open(os.path.join(os.path.dirname(__file__), "urlorphans.txt"), "a")
