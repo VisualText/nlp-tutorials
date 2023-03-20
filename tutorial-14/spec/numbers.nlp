@@ -1,0 +1,57 @@
+###############################################
+# FILE: numbers
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2023-3-2 22:8:25
+# MODIFIED:
+###############################################
+
+@NODES _LINE
+
+@POST
+    L("node") = N(1);
+    L("last") = 0;
+	L("final") = 0;
+	"number.txt" << phrasetext() << "\n";
+
+    while (L("node")) {
+        L("name") = pnname(L("node"));
+        if (L("name") != "," && L("name") != "-" && L("name") != "and"  && L("name") != "&") {
+            L("num") = num(pnvar(L("node"),"numeric"));
+			L("power") = num(pnvar(L("node"),"power"));
+			"number.txt" << pnname(L("node")) << " " << L("num") << " " << L("last") << " => ";   
+
+			if (L("last power") <= 1 && L("power") == 1) {
+				L("last") = L("last") * 100 + L("num");
+			} else if (L("power") <= 2) {
+				if (L("num") > L("last")) {
+					if (L("last"))
+						L("last") = L("last") * L("num");
+					else
+						L("last") = L("num");				
+				} else {
+					L("last") = L("last") + L("num");
+				}
+				"number.txt" << L("last");		
+			} else {
+				L("final") = L("final") + L("last") * L("num");
+				"number.txt" << "final = " << L("final") << " ";
+				L("last") = 0;
+			}
+
+            "number.txt" << "\n";
+			L("last power") = L("power");   
+        }
+        L("node") = pnnext(L("node"));
+    }
+	L("final") = L("final") + L("last");
+	"number.txt" << "=====> " << L("final") << "\n\n";
+	S("numeric") = L("final");
+	single();
+
+@RULES
+_number <-
+	_xWILD [plus match=(_number \- \, and \&)]	### (1)
+	@@
+
+

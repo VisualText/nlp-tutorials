@@ -1,0 +1,35 @@
+# Number words with numberic values
+
+one s=number numeric=1
+two s=number numeric=2
+three s=number numeric=3
+four s=number numeric=4
+five s=number numeric=5
+six s=number numeric=6
+seven s=number numeric=7
+eight s=number numeric=8
+nine s=number numeric=9
+ten s=number numeric=10 power=1
+eleven s=number numeric=11 power=1
+twelve s=number numeric=12 power=1
+thirteen s=number numeric=13 power=1
+fourteen s=number numeric=14 power=1
+fifteen s=number numeric=15 power=1
+sixteen s=number numeric=16 power=1
+seventeen s=number numeric=17 power=1
+eighteen s=number numeric=18 power=1
+nineteen s=number numeric=19 power=1
+twenty s=number numeric=20 power=1
+thirty s=number numeric=30 power=1
+forty s=number numeric=40 power=1
+fifty s=number numeric=50 power=1
+sixty s=number numeric=60 power=1
+seventy s=number numeric=70 power=1
+eighty s=number numeric=80 power=1
+ninety s=number numeric=90 power=1
+hundred s=number numeric=100 power=2
+thousand s=number numeric=1000 power=3
+million s=number numeric=1000000 power=4
+billion s=number numeric=1000000000 power=5
+trillion s=number numeric=1000000000000 power=6
+
