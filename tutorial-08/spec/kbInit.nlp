@@ -8,10 +8,8 @@
 
 @CODE
 
-G("person") = findconcept(findroot(),"person");
-if (!G("person")) G("person") = makeconcept(findroot(),"person");
-
-G("sentences") = findconcept(findroot(),"sentences");
-if (!G("sentences")) G("sentences") = makeconcept(findroot(),"sentences");
+# Simplified since tutorials were recorded
+G("person") = getconcept(findroot(),"person");
+G("sentences") = getconcept(findroot(),"sentences");
 
 @@CODE

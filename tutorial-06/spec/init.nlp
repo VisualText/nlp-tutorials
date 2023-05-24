@@ -10,12 +10,8 @@
 
 G("max header") = 0;
 
-G("resume") = findconcept(findroot(),"resume");
-if (!G("resume")) G("resume") = makeconcept(findroot(),"resume");
-rmchildren(G("resume"));
-
-G("company") = findconcept(G("resume"),"company");
-if (!G("company")) G("company") = makeconcept(G("resume"),"company");
-rmchildren(G("company"));
+# Simplified since tutorials were recorded
+G("resume") = getconcept(findroot(),"resume");
+G("company") = getconcept(G("resume"),"company");
 
 @@CODE
