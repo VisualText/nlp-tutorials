@@ -1,0 +1,15 @@
+###############################################
+# FILE: init
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2024-7-9 7:49:57
+# MODIFIED:
+###############################################
+
+@CODE
+
+G("dictionary") = getconcept(findroot(),"dictionary");
+SaveKB("dictionary.kbb",G("dictionary"),2);
+SaveKB("root.kbb",findroot(),2);
+
+@@CODE
