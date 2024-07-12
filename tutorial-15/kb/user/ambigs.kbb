@@ -1,0 +1,4 @@
+dictionary
+  google
+    m01: pos=verb, syn=search
+    m02: pos=noun, entity=company

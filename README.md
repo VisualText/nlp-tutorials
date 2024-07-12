@@ -76,3 +76,7 @@ This analyzer analyzes the 50 state webpages and creates dictionaries and a know
 ## Tutorial 14: Mod Files
 
 Mod files allow for bundling text, NLP++ code (passes), dictionaries, and knowledge base files into one file that can be easily created and loaded into VisualText (the NLP++ langauge extension for VSCode).: [YouTube Video Tutorial 14](https://youtu.be/dRpGY0SPLSo)
+
+# Tutorial 15: Resolving Ambiguity
+
+This tutorial you will learn about the new mechanisms to help resolve with ambiguity. Ambiguity is when a word in isolation can have more than one meaning. Dealing with ambiguity in NLP++ is a cordinated effort between dictionaries, knowledge bases, and rule matching. [YouTube Video Tutorial 14](https://youtu.be/XLEj1hsS4ME)

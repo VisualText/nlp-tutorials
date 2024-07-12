@@ -1,0 +1,41 @@
+###############################################
+# FILE: ambig
+# SUBJ: comment
+# AUTH: David de Hilster
+# CREATED: 2024-7-9 16:35:17
+# MODIFIED:
+###############################################
+
+@NODES _ROOT
+
+# He works at google.
+
+@PRE
+<1,1> var("prep");
+<2,2> var("noun");
+<2,2> vargt("pos num",1);
+
+@POST
+AmbigTrimPOS(N(2),"noun");
+
+@RULES
+_xNIL <-
+	_xALPHA	### (1)
+	_xALPHA	### (2)
+	@@
+
+# Did you google his friend?
+
+@PRE
+<1,1> var("verb");
+<1,1> vargt("pos num",1);
+<2,2> var("pro");
+
+@POST
+AmbigTrimPOS(N(1),"verb");
+
+@RULES
+_xNIL <-
+	_xALPHA	### (1)
+	_xALPHA	### (2)
+	@@
