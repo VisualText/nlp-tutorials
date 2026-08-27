@@ -1,12 +1,12 @@
 tokenize	nil	# Gen:   Convert input to token list
-nlp	init	# comment
-nlp	RemoveWhiteSpace	# comment
-nlp	ruleRegions	# comment
-nlp	dictionary	# comment
-nlp	xNodes	# comment
-nlp	suggestedModifiers	# comment
-nlp	phraseModifiers	# comment
-nlp	wildCards	# comment
-nlp	postRegion	# comment
-nlp	preRegion	# comment
-nlp	checkRegion	# comment
+nlp	init	# Set the people counter global that the CHECK region pass tests
+nlp	RemoveWhiteSpace	# Remove the white space tokens from the text
+nlp	ruleRegions	# The rule regions PRE, POST, and CHECK shown on a single header rule
+nlp	dictionary	# A small dictionary of rules: states, determiners, adjectives, nouns, and months
+nlp	xNodes	# The special rule elements: _xSTART, _xALPHA, _xNUM, _xWILD, and the rest
+nlp	suggestedModifiers	# The suggested element modifiers: s, base, and unsealed
+nlp	phraseModifiers	# The phrase element modifiers: optional and trig
+nlp	wildCards	# What the _xWILD element can match and how it is bounded
+nlp	postRegion	# The POST region: what actions can run after a rule matches
+nlp	preRegion	# The PRE region: filtering a date rule before it is allowed to match
+nlp	checkRegion	# The CHECK region: succeeding or failing a rule from a global

@@ -1,19 +1,19 @@
 tokenize	nil	# Gen:   Convert input to token list
-nlp	KBFuncs	# comment
-nlp	init	# comment
-nlp	tags	# comment
-nlp	tagPhrases	# comment
-nlp	theRest	# comment
-nlp	removeRest	# comment
-nlp	textTags	# comment
-nlp	removeTextTags	# comment
-nlp	tagText	# comment
-nlp	RemoveWhiteSpace	# comment
-nlp	labelData	# comment
-nlp	abbreviation	# comment
-nlp	areaCodes	# comment
-nlp	timeZone	# comment
-nlp	cities	# comment
-nlp	capital	# comment
-nlp	counties	# comment
-nlp	final	# comment
+nlp	KBFuncs	# Declare the knowledge base display and dump functions
+nlp	init	# Set up the output file names and the state concept for this input file
+nlp	tags	# Find the opening and closing table cell tags
+nlp	tagPhrases	# Gather everything between an open and close tag into a table cell
+nlp	theRest	# Gather everything outside the table cells into one node
+nlp	removeRest	# Excise everything outside the table cells
+nlp	textTags	# Find the HTML tags inside a table cell
+nlp	removeTextTags	# Excise the HTML tags from inside the table cells
+nlp	tagText	# Copy the text of each table cell into its node
+nlp	RemoveWhiteSpace	# Remove the white space tokens from the table cells
+nlp	labelData	# Rename each data cell after the label in the cell before it
+nlp	abbreviation	# Record the state abbreviation in the knowledge base and the dictionary
+nlp	areaCodes	# Record the state's area codes in the knowledge base
+nlp	timeZone	# Record the state's time zones in the knowledge base
+nlp	cities	# Record the state's largest cities and their populations
+nlp	capital	# Record the state capital in the knowledge base
+nlp	counties	# Record the number of counties in the state
+nlp	final	# After the last input file, write out the states dictionary and knowledge base

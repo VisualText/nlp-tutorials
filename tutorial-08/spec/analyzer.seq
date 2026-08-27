@@ -1,14 +1,14 @@
 tokenize	nil	# Gen:   Convert input to token list
-nlp	kbInit	# comment
-nlp	KBFuncs	# comment
-nlp	funcs	# comment
-nlp	Lines	# comment
-nlp	kbDisplay01	# comment
-nlp	RemoveWhiteSpace	# comment
-nlp	dictionary	# comment
-nlp	kbDisplay02	# comment
-nlp	attributes	# comment
-nlp	resolvePronouns	# comment
-nlp	kbDisplay03	# comment
-nlp	peopleAttrs	# comment
-nlp	kbDisplay04	# comment
+nlp	kbInit	# Create the person and sentences concepts in the knowledge base
+nlp	KBFuncs	# Declare the knowledge base display and dump functions
+nlp	funcs	# Declare the functions that add people to the knowledge base and resolve pronouns
+nlp	Lines	# Gather the text into lines and make a sentence concept for each one
+nlp	kbDisplay01	# Display the knowledge base after the lines are gathered
+nlp	RemoveWhiteSpace	# Remove the white space tokens inside each line
+nlp	dictionary	# Recognize the names and pronouns and add them to the knowledge base
+nlp	kbDisplay02	# Display the knowledge base after the names and pronouns are added
+nlp	attributes	# Find the attributes stated about a person: is a, is N years old, is married to
+nlp	resolvePronouns	# Resolve each pronoun to the nearest person of the same gender
+nlp	kbDisplay03	# Display the knowledge base after the pronouns are resolved
+nlp	peopleAttrs	# Attach the attributes and relationships to the people in the knowledge base
+nlp	kbDisplay04	# Display the knowledge base after the attributes are attached

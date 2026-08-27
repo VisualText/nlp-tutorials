@@ -1,9 +1,9 @@
 tokenize	nil	# Gen:   Convert input to token list
-nlp	points	# comment
-nlp	Lines	# comment
-nlp	paragraph	# comment
-nlp	RemoveBlankLines	# comment
-nlp	spliceLines	# comment
-nlp	RemoveWhiteSpace	# comment
-nlp	sentenceEnders	# comment
-nlp	sentences	# comment
+nlp	points	# Protect the periods that do not end a sentence, as in abbreviations and decimals
+nlp	Lines	# Gather the text into line and blank line nodes
+nlp	paragraph	# Group runs of lines into paragraphs
+nlp	RemoveBlankLines	# Remove the blank lines from the text
+nlp	spliceLines	# Splice out the line nodes so each paragraph holds its tokens directly
+nlp	RemoveWhiteSpace	# Remove the white space tokens from the text
+nlp	sentenceEnders	# Mark the punctuation that ends a sentence
+nlp	sentences	# Cut each paragraph into sentences at the sentence enders
