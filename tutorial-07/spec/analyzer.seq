@@ -1,5 +1,5 @@
 tokenize	nil	# Gen:   Convert input to token list
-nlp	readme	# comment
-nlp	codeRegion	# comment
-nlp	declRegion	# comment
-nlp	rulesRegion	# comment
+nlp	readme	# A documentation-only pass showing where to describe what a pass file does
+nlp	codeRegion	# The CODE region: set a global, call a function, and write to a file
+nlp	declRegion	# The DECL region: declare a function that later passes can call
+nlp	rulesRegion	# The RULES region: a rule that matches the word hello

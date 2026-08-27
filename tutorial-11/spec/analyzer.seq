@@ -1,4 +1,4 @@
 dicttokz	nil	# Gen:   Convert input to token list
-nlp	KBFuncs	# comment
-nlp	dictionary	# comment
-nlp	outKB	# comment
+nlp	KBFuncs	# Declare the knowledge base display and dump functions
+nlp	dictionary	# Add words and their attributes to the dictionary knowledge base
+nlp	outKB	# Dump the whole knowledge base starting at the root

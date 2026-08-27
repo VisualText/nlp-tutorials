@@ -1,4 +1,4 @@
 tokenize	nil	# Gen:   Convert input to token list
-nlp	tags	# comment
-nlp	removeTags	# comment
-nlp	output	# comment
+nlp	tags	# Find the HTML tags and record their names
+nlp	removeTags	# Excise the HTML tags from the text
+nlp	output	# Print the special variables: $text, $treetext, and the input path globals

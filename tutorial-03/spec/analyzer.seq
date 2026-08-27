@@ -1,12 +1,12 @@
 tokenize	nil	# Gen:   Convert input to token list
-nlp	init	# comment
-nlp	KBFuncs	# comment
-nlp	Lines	# comment
-nlp	RemoveWhiteSpace	# comment
-nlp	RemoveBlankLines	# comment
-nlp	header	# comment
-nlp	removeLines	# comment
-rec	nestHeaders	# comment
-nlp	labelZones	# comment
-nlp	companies	# comment
-nlp	output	# comment
+nlp	init	# Create the resume and company concepts in the knowledge base
+nlp	KBFuncs	# Declare the knowledge base display and dump functions
+nlp	Lines	# Gather the text into line and blank line nodes
+nlp	RemoveWhiteSpace	# Remove the white space tokens inside each line
+nlp	RemoveBlankLines	# Remove the blank lines from the text
+nlp	header	# Find the markdown header lines and record the header text and its level
+nlp	removeLines	# Splice out the lines that are not headers
+rec	nestHeaders	# Recursively nest each zone under its header, deepest heading level first
+nlp	labelZones	# Rename each header zone node after the header that starts it
+nlp	companies	# Count the companies under the experience zone and add them to the knowledge base
+nlp	output	# Display the resume knowledge base

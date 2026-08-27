@@ -1,4 +1,4 @@
 dicttokz	nil	# Gen:   Convert input to token list
-nlp	init	# comment
-nlp	KBFuncs	# comment
-nlp	ambig	# comment
+nlp	init	# Save the dictionary and root knowledge bases out to files
+nlp	KBFuncs	# Declare the knowledge base display and dump functions
+nlp	ambig	# Trim the ambiguous parts of speech using the surrounding words

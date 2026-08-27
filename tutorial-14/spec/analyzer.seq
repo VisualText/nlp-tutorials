@@ -1,4 +1,4 @@
 dicttok	nil	# Gen:   Convert input to token list
-nlp	Lines	# comment
-nlp	RemoveWhiteSpace	# comment
-nlp	numbers	# comment
+nlp	Lines	# Gather the text into line and blank line nodes
+nlp	RemoveWhiteSpace	# Remove the white space tokens inside each line
+nlp	numbers	# Add up a run of word-based numbers into a single numeric value
