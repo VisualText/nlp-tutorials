@@ -117,13 +117,14 @@ CountName(L("con"),L("root")) {
 }
 
 StripEndDigits(L("name")) {
+	# "item12" -> "item".  A name with no trailing digits comes back whole,
+	# an all-digit name gives 0.  Positions only count up from 0, so a short
+	# name never reaches a negative strpiece position (which counts from the
+	# end since engine 4.2.15).
 	if (strisdigit(L("name"))) return 0;
-	L("len") = strlength(L("name")) - 1;
-	L("i") = L("len") - 1;
-	L("str") = strpiece(L("name"),L("i"),L("len"));
-	while (strisdigit(L("str")) && L("i")) {
+	L("i") = strlength(L("name")) - 1;
+	while (L("i") > 0 && strisdigit(strpiece(L("name"),L("i"),L("i")))) {
 		L("i")--;
-		L("str") = strpiece(L("name"),L("i"),L("len"));
 	}
 	return strpiece(L("name"),0,L("i"));
 }
